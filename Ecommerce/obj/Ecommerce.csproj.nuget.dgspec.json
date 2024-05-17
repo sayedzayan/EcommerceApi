@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "E:\\my courses\\. Net ITI\\Ecommerce_Project abdo\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {}
+    "E:\\my courses\\. Net ITI\\Ecommerce_Project abdo\\ECommerceApi\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {}
   },
   "projects": {
-    "E:\\my courses\\. Net ITI\\Ecommerce_Project abdo\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {
+    "E:\\my courses\\. Net ITI\\Ecommerce_Project abdo\\ECommerceApi\\Ecommerce\\Ecommerce\\Ecommerce.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\my courses\\. Net ITI\\Ecommerce_Project abdo\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+        "projectUniqueName": "E:\\my courses\\. Net ITI\\Ecommerce_Project abdo\\ECommerceApi\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
         "projectName": "Ecommerce",
-        "projectPath": "E:\\my courses\\. Net ITI\\Ecommerce_Project abdo\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
+        "projectPath": "E:\\my courses\\. Net ITI\\Ecommerce_Project abdo\\ECommerceApi\\Ecommerce\\Ecommerce\\Ecommerce.csproj",
         "packagesPath": "C:\\Users\\MG\\.nuget\\packages\\",
-        "outputPath": "E:\\my courses\\. Net ITI\\Ecommerce_Project abdo\\Ecommerce\\Ecommerce\\obj\\",
+        "outputPath": "E:\\my courses\\. Net ITI\\Ecommerce_Project abdo\\ECommerceApi\\Ecommerce\\Ecommerce\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -45,6 +45,10 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[7.0.18, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[7.0.3, )"

@@ -2,6 +2,7 @@
 using Ecommerce.BusinessLogic.Managers.Abstracts;
 using Ecommerce.BusinessLogic.Managers.Implementations;
 using Microsoft.AspNetCore.Mvc;
+using System.Reflection.Metadata.Ecma335;
 
 namespace Ecommerce.Controllers
 {
@@ -31,6 +32,31 @@ namespace Ecommerce.Controllers
             return Ok(category);
         }
 
+
+        [HttpPut("update/{id}")]
+       public IActionResult UpdateCategory(int id, UpdateCategoryDto updateCategoryDto)
+        {
+            var existingCategory = _categoryManager.GetById(id);
+            if (existingCategory == null)
+            {
+            return NotFound();
+            }
+
+            _categoryManager.Update(id , updateCategoryDto);
+            return NoContent();
+        }
+
+        [HttpDelete("delete/{id}")]
+        public IActionResult DeleteCategory(int id, DeleteCategoryDto deleteCategory) 
+        {
+           
+            _categoryManager.Delete(id);
+            return NoContent();
+        
+        }
+       
+
+           
 
     }
 }

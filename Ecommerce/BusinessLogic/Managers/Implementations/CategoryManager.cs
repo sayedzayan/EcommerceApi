@@ -3,6 +3,7 @@ using Ecommerce.BusinessLogic.Managers.Abstracts;
 using Ecommerce.Domain.Entities;
 using Ecommerce.Domain.Repositories.Abstracts;
 using Ecommerce.Domain.Repositories.implementations;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 namespace Ecommerce.BusinessLogic.Managers.Implementations
 {
@@ -29,6 +30,16 @@ namespace Ecommerce.BusinessLogic.Managers.Implementations
 
         }
 
+        public void Delete(int id )
+        {
+            var category= _categoryRepository.GetById( id );
+            if( category != null )
+            {
+                _categoryRepository.Delete( category );
+                _categoryRepository.SaveChanges();
+            }
+        }
+
         public ReadCategoryDto GetById(int id)
         {
             var category = _categoryRepository.GetById(id);
@@ -48,6 +59,19 @@ namespace Ecommerce.BusinessLogic.Managers.Implementations
            // throw new NotImplementedException();
 
         }
+
+       
+        public void Update(int id ,UpdateCategoryDto updatecategory)
+        {
+            var category = _categoryRepository.GetById(id);
+            category.Name  = updatecategory.Name;
+            category.Description = updatecategory.Description;
+            _categoryRepository.Update(category);
+            _categoryRepository.SaveChanges();
+        }
+
+        
+
     }
     }
 

@@ -7,5 +7,7 @@ namespace Ecommerce.BusinessLogic.Managers.Abstracts
     {
         void Create(CreateCategoryDto category);
         ReadCategoryDto GetById(int id);
+        void Update(int id , UpdateCategoryDto updateCategoryDto);
+        void Delete(int id);
     }
 }
